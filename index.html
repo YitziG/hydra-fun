@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <title>Yitzi's page</title>
+      <meta charset="UTF-8">
+      <script src="https://unpkg.com/hydra-synth"></script>
+      </style>
+</head>
+
+<body>
+      <script>
+            // create a new hydra-synth instance
+            var hydra = new Hydra({
+                  canvas: document.querySelector('canvas'),
+                  detectAudio: true
+            })
+            s0.initCam()
+            // use audio and camera to create a feedback loop
+            shape(200, () => a.fft[0], 1.5)
+                  .add(src(s0).scale(0.5), 0.5)
+                  .scale(0.5, 0.5)
+                  .color([0.5, 2].smooth(1), 0.3, 0)
+                  .repeat(2, 2)
+                  .modulateScale(osc(3, 0.5), -0.6)
+                  .add(o0, 0.5)
+                  .scale(0.9)
+                  .out()
+      </script>
+</body>
+
+</html>
